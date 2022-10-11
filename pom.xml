@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>master-telcom-app</finalName>
+		<finalName>bug-fix-telcom-app</finalName>
 		
 		<plugins>
 			<plugin>
