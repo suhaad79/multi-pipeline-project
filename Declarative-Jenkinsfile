@@ -10,7 +10,7 @@ pipeline {
         stage(‘1SCM’){
             steps{
                 sh 'echo "apps latest version committed"'
-                git "https://github.com/Serene7n/multi-pipeline.git"
+                git "https://github.com/suhaad79/multi-pipeline-project.git"
             }
         }
         stage(‘2Build’){
@@ -36,7 +36,7 @@ pipeline {
          stage(‘UATDeploy’){
             steps {
                 sh "echo 'deploy to tomcat'"
-                deploy adapters: [tomcat9(credentialsId: 'deploy-id', path: '', url: 'http://192.168.1.102:8080')], contextPath: null, war: 'target/*.war'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://34.202.231.227:8080')], contextPath: null, war: 'target/*war'
                 } 
             } 
         
